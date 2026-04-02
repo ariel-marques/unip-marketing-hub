@@ -1,0 +1,651 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-quaternary: #075ebd;
+  --color-tertiary: #07366a;
+  --color-primary: #3689e2;
+  --color-success: #208436;
+  --color-secondary: #6c757d;
+  --color-warning: #f7e704;
+  --color-azul-naval: #000080;
+}
+
+body {
+  font-family: 'Rubik', 'Raleway', sans-serif !important;
+}
+html {scroll-behavior: smooth;}
+
+.bg-azul-naval {
+  background-color: var(--color-azul-naval)
+}
+
+
+body {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #003399;
+}
+
+
+.svg-12 {
+  width: .75rem;
+  height: .75rem
+}
+
+/*12px*/
+.svg-14 {
+  width: .875rem;
+  height: .875rem
+}
+
+/*14px*/
+.svg-16 {
+  width: 1rem;
+  height: 1rem
+}
+
+/*16px*/
+.svg-18 {
+  width: 1.125rem;
+  height: 1.125rem
+}
+
+/*18px*/
+.svg-20 {
+  width: 1.25rem;
+  height: 1.25rem
+}
+
+/*20px*/
+.svg-24 {
+  width: 1.5rem;
+  height: 1.5rem
+}
+
+/*24px*/
+.svg-28 {
+  width: 1.75rem;
+  height: 1.75rem
+}
+
+/*28px*/
+.svg-32 {
+  width: 2rem;
+  height: 2rem
+}
+
+/*32px*/
+.svg-36 {
+  width: 2.25rem;
+  height: 2.25rem
+}
+
+/*36px*/
+.svg-40 {
+  width: 2.5rem;
+  height: 2.5rem
+}
+
+/*40px*/
+.svg-42 {
+  width: 2.625rem;
+  height: 2.625rem
+}
+
+/*42px*/
+.svg-44 {
+  width: 2.75rem;
+  height: 2.75rem
+}
+
+/*44px*/
+.svg-48 {
+  width: 3rem;
+  height: 3rem
+}
+
+/*48px*/
+.svg-52 {
+  width: 3.25rem;
+  height: 3.25rem
+}
+
+/*52px*/
+.svg-fill-black {
+  fill: var(--color-black)
+}
+
+.svg-fill-white {
+  fill: var(--color-white)
+}
+
+.svg-fill-primary {
+  fill: var(--color-primary)
+}
+
+.svg-fill-quaternary {
+  fill: var(--color-quaternary)
+}
+
+.svg-fill-tertiary {
+  fill: var(--color-tertiary)
+}
+
+.svg-fill-success {
+  fill: var(--color-success)
+}
+
+.svg-fill-secondary {
+  fill: var(--color-secondary)
+}
+
+.svg-fill-warning {
+  fill: var(--color-warning)
+}
+
+
+.login-wrapper {
+  min-height: 100vh;
+}
+
+.login-card {
+  border: 1px solid var(--color-quaternary);
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(7, 37, 95, .08);
+  background: #fff;
+}
+
+/* Coluna da imagem (campanha) */
+.login-hero {
+  background: #0e1330 url('/assets/img/login-campaign.jpg') center/cover no-repeat;
+  position: relative;
+  min-height: 220px;
+}
+
+.login-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 27, 107, .15) 0%, rgba(10, 27, 107, .55) 100%);
+}
+
+.login-hero-badge {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: #fff;
+  color: #0e1330;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .35rem 1rem;
+  font-size: .8rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+}
+
+.login-hero-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, .35);
+}
+
+.login-hero-caption small {
+  opacity: .85
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 .2rem rgba(16, 35, 198, .15);
+}
+
+.navbar-brand img {
+  height: 32px;
+  width: auto
+}
+
+.nav-link.active {
+  color: #FFC600
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: #000080;
+}
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Estado inicial */
+#topo {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Estado transl&uacute;cido ao rolar */
+#topo.scrolled {
+  background-color: rgba(216, 216, 216, 0.6);
+  /* azul-naval transl&uacute;cido */
+  backdrop-filter: blur(8px);
+}
+
+/* Transições suaves */
+#topo nav {
+  transition: background-color 0.8s ease, backdrop-filter 0.3s ease, color 0.3s ease;
+}
+
+/* Estado com rolagem */
+#topo.scrolled nav {
+  background-color: rgba(255, 255, 255, 0) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Textos quando há rolagem */
+#topo.scrolled .nav-link,
+#topo.scrolled .navbar-brand h1 {
+  color: #003399 !important;
+}
+
+/* Change the navbar toggler (hamburger) stroke color when scrolled */
+#topo.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23003399' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  border-color: #003399;
+}
+
+/* Mantém a logo branca visível com o fundo original */
+#topo img {
+  transition: filter 0.3s ease;
+}
+
+/* Deixa a logo um pouco mais escura no modo translúcido */
+#topo.scrolled img {
+  filter: brightness(0.9);
+}
+
+/* Hover styles for topo nav menu */
+#topo nav .nav-link,
+#topo nav a {
+  transition: color .18s ease, background-color .18s ease;
+}
+
+/* When header is in its normal state, nav links turn white on hover */
+#topo:not(.scrolled) nav .nav-link:hover,
+#topo:not(.scrolled) nav a:hover {
+  color: #FFC600 !important;
+}
+
+/* When header is scrolled, keep UNIP blue on hover */
+#topo.scrolled nav .nav-link:hover,
+#topo.scrolled nav a:hover {
+  color: #007bff !important;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+/* HERO */
+.page-hero {
+  background-color: #003893;
+  color: #ffffff;
+  padding: 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.page-hero .page-hero-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.page-hero .page-hero-subtitle {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 576px) {
+  .page-hero {
+    padding: 1.75rem 0;
+  }
+  .page-hero .page-hero-title {
+    font-size: 1.3rem;
+  }
+  .page-hero .page-hero-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+.icon-logout {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  transition: fill .25s ease;
+}
+
+header.scrolled .icon-logout {
+  fill: #003399;
+}
+
+header.scrolled .icon-logout:hover {
+  fill: #007bff;
+}
+
+.logout-link:hover .icon-logout {
+  fill: #FFC600;
+}
+
+.hero-banner .ratio {
+  background: #dfe4ea;
+  border: 2px dashed #c9ced6
+}
+
+#backToTop {
+  background-color: var(--color-azul-naval);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1030;
+}
+
+footer {
+  background-color: #0d0d90;
+}
+
+.card-comunicados {
+  position: relative;
+  border: 1px solid #0d0d90;
+  /* azul escuro UNIP */
+  border-radius: 1rem;
+}
+
+.card-comunicados .card-footer {
+  position: absolute;
+  bottom: -1.4rem;
+  /* faz o badge “sair” um pouco do card */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.badge-comunicados {
+  background-color: #0d0d90;
+  font-size: 0.875rem;
+}
+
+.badge-novo {
+  background: #00A637;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  margin-left: 0.5rem;
+}
+
+.badge-novo-card {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00A637;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.35rem 1.6rem;
+  border-radius: 999px;
+  line-height: 1;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+/* Form */
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  filter: brightness(.95);
+}
+
+.bg-warning {
+  background-color: #ffe1a3 !important;
+}
+
+.card-material {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.card-material img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-material .badge-floating {
+  position: absolute;
+  top: 219px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.card-material:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.list-materiais {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.list-materiais li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #e5e7eb;
+  transition: color 0.2s ease;
+}
+
+.list-materiais li:last-child {
+  border-bottom: 0
+}
+
+.pdf-badge,
+.jpg-badge,
+.png-badge,
+.mp4-badge {
+  font-size: .65rem;
+  font-weight: 600;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.pdf-badge {
+  background: #59b3f1
+}
+
+.jpg-badge {
+  background: #53b67a
+}
+
+.png-badge {
+  background: #f4c542;
+  color: #111
+}
+
+.mp4-badge {
+  background: #3d6de4
+}
+
+
+/* Estilos para a barra de pesquisa */
+
+#searchResults {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .75rem;
+}
+
+.search-item {
+  padding: .55rem .8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.search-item:last-child {
+  border-bottom: 0;
+}
+
+.search-item:hover {
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.search-item small {
+  color: #6b7280;
+}
+
+.badge-type {
+  color: #6b7280;
+  text-transform: uppercase;
+  font-size: small;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  border-radius: 999px;
+  display: none;
+  /* começa escondido, o JS mostra */
+}
+
+
+/* Estilos para a seção de comunicados */
+.comunicados-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comunicado-item {
+  position: relative;
+  /* 👈 novo */
+  border: 2px solid #1b2a7a;
+  border-radius: 1.75rem;
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow .2s ease;
+}
+
+.comunicado-item.is-open {
+  box-shadow: 0 8px 20px rgba(7, 37, 95, 0.08);
+}
+
+.comunicado-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.00rem 1.5rem;
+  cursor: pointer;
+}
+
+.comunicado-titulo {
+  font-weight: 700;
+  color: var(--color-quaternary);
+}
+
+.comunicado-data {
+  font-size: 0.75rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.comunicado-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: max-height .25s ease;
+}
+
+.comunicado-body-content {
+  padding-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.comunicado-item.is-open .comunicado-body {
+  /* valor alto pra garantir caber o texto */
+  max-height: 500px;
+}
+
+@media (max-width: 576px) {
+  .comunicado-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comunicado-data {
+    white-space: normal;
+  }
+}

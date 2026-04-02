@@ -1,0 +1,7 @@
+:root {
+  --color-azul-naval: #000080;
+}
+body {
+  font-family: 'Rubik', 'Raleway', sans-serif !important;
+}
+.bg-azul-naval {background-color: var(--color-azul-naval)}
